@@ -3,7 +3,7 @@ class Database {
     private $host = "localhost";
     private $db_name = "oop_php_lab";
     private $username = "root";
-    private $password = "yourpassword";  // Replace with your MySQL password
+    private $password = " ";  
     public $conn;
 
     public function getConnection() {
@@ -18,3 +18,5 @@ class Database {
         return $this->conn;
     }
 }
+
+   
