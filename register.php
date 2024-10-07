@@ -76,5 +76,27 @@ class Database {
     }
 }
 
+    include_once 'database.php';
+    include_once 'user.php';
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    
+    $database = new Database();
+    $db = $database->getConnection();
+
+    
+    $user = new User($db);
+
+    
+    $user->name = htmlspecialchars(strip_tags($_POST['name']));
+    $user->email = htmlspecialchars(strip_tags($_POST['email']));
+    $user->password = htmlspecialchars(strip_tags($_POST['password']));
+
+
+    $result = $user->register();
+    echo $result;
+}
+
+
 ?>
    
