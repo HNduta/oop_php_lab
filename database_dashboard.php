@@ -27,6 +27,6 @@ if ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     echo "<p>Email: {$email}</p>";
     echo "<p>Account created on: {$created_at}</p>"; 
 } else {
-    echo "<p>User not found.</p>";
+    echo "<p>Error. User not found.</p>";
 }
 ?>
