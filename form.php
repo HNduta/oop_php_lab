@@ -78,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user->verification_token = bin2hex(random_bytes(16));
 
     if ($user->create()) {
-        // Send verification email
+    
         $mail = new PHPMailer(true);
         try {
             //Server settings
