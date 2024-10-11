@@ -6,7 +6,7 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 include_once 'register.php';
-include_once 'users.php';
+include_once 'user.php';
 
 $database = new Database();
 $db = $database->getConnection();
