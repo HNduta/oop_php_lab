@@ -11,6 +11,7 @@ include_once 'user.php';
 $database = new Database();
 $db = $database->getConnection();
 
+// Check if the database connection failed
 if ($db === null) {
     die('Database connection failed');
 }
