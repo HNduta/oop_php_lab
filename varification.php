@@ -1,6 +1,6 @@
 <?php
-include_once 'db_connection.php';
-include_once 'users.php';
+include_once 'register.php';
+include_once 'user.php';
 
 if (isset($_GET['token'])) {
     $database = new Database(); 
