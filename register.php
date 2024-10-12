@@ -2,16 +2,16 @@
 // Define the Database class to handle database connections.
 class Database {
 
-    // Define private properties for database connection details.
-    private $host = "localhost";       // The hostname of the database server (usually localhost for local development).
-    private $db_name = "oop_php_lab";  // The name of the database.
-    private $username = "root";        // The database username (default is 'root' in local development).
-    private $password = " ";           // The database password (empty by default for XAMPP/MAMP, but it should be filled).
+
+    private $host = "localhost";       
+    private $db_name = "oop_php_lab";  
+    private $username = "root";        
+    private $password = " ";           
     
     // Public property to hold the database connection.
     public $conn;
 
-    // Method to establish a connection to the database using PDO (PHP Data Objects).
+    // Method to establish a connection to the database using PDO 
     public function getConnection() {
         // Initialize the connection variable as null.
         $this->conn = null;
