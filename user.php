@@ -3,7 +3,7 @@ class User {
     private $conn;
     private $table_name = "users";
 
-    public $id;;
+    public $id;
     public $name;
     public $email;
     public $password;
@@ -14,11 +14,10 @@ class User {
     }
 
     public function create() {
-        $query = "INSERT INTO " . $this->table_name . " (firstname, lastname, email, password) VALUES (:firstname, :lastname, :email, :password)";
+        $query = "INSERT INTO " . $this->table_name . " (name, email, password) VALUES (:firstname, :lastname, :email, :password)";
         $stmt = $this->conn->prepare($query);
 
-        $stmt->bindParam(':firstname', $this->firstname);
-        $stmt->bindParam(':lastname', $this->lastname);
+        $stmt->bindParam(':name', $this->name);
         $stmt->bindParam(':email', $this->email);
         $stmt->bindParam(':password', password_hash($this->password, PASSWORD_BCRYPT));
 
