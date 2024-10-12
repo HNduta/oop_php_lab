@@ -13,6 +13,7 @@ if (isset($_GET['token'])) {
     $user = new User($db);
     $user->verification_token = htmlspecialchars(strip_tags($_GET['token']));
 
+    // Call the verifyEmail method of the User class to verify the token.
     if ($user->verifyEmail()) {
         echo 'Email verified successfully!';
     } else {
